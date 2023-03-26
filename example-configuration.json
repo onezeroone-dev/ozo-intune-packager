@@ -1,0 +1,76 @@
+{
+    "desktopIconsDirectory":"C:\\Users\\Public\\Desktop",
+    "enableFIPSBugMitigation":"FALSE",
+    "msiexecPath":"C:\\Windows\\System32\\msiexec.exe",
+    "intuneInstallBehavior":"System",
+    "intuneInstallCommand":"install.cmd",
+    "intuneUninstallCommand":"uninstall.cmd",
+    "intuneOperatingSystemArchitecture":"64-bit",
+    "intuneMinimumOperatingSystem":"Windows 10 20H2",
+    "intuneDetectionRulesFormat":"Manually configure detection rules",
+    "intuneDetectionRuleType":"Registry",
+    "intuneDetectionKeyPath":"Computer\\HKEY_LOCAL_MACHINE\\SOFTWARE\\One Zero One\\Intune Packager",
+    "intuneDetectionMethod":"String comparison",
+    "intuneDetectionOperator":"Equals",
+    "intuneWinAppUtilURL":"https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/raw/master/IntuneWinAppUtil.exe",
+    "packagesDirectory":"C:\\Path\\To\\OZO Intune Packager\\Packages",
+    "assetsDirectory":"C:\\Path\\To\\OZO Intune Packager\\Assets",
+    "templatesDirectory":"C:\\Path\\OZO Intune Packager\\To\\Templates",
+    "workingDirectory":"C:\\Path\\To\\OZO Intune Packager\\Temp",
+    "applications":[
+        {
+            "name":"7-Zip",
+            "appID":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "shortName":"7zip",
+            "enabled":"FALSE",
+            "version":"22.01",
+            "deployment":"000",
+            "downloadURL":"https://www.7-zip.org/a/7z2201-x64.msi",
+            "desktopIcons":[]
+        },
+        {
+            "name":"Git for Windows",
+            "appID":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "shortName":"gitforwindows",
+            "enabled":"TRUE",
+            "version":"2.39.2",
+            "deployment":"000",
+            "downloadURL":"https://github.com/git-for-windows/git/releases/download/v2.39.2.windows.1/Git-2.39.2-64-bit.exe",
+            "installerArguments":"/VERYSILENT /NORESTART /o:UseCredentialManager=Disabled",
+            "uninstallerPath":"C:\\Program Files\\Git\\unins000.exe",
+            "uninstallerArguments":"/VERYSILENT /NORESTART",
+            "assetsDirectory":"C:\\Path\\To\\Assets\\gitforwindows",
+            "desktopIcons":[]
+        },        
+        {
+            "name":"gVim",
+            "appID":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "shortName":"gvim",
+            "enabled":"TRUE",
+            "version":"9.0.1314",
+            "deployment":"000",
+            "downloadURL":"https://github.com/vim/vim-win32-installer/releases/download/v9.0.1314/gvim_9.0.1314_x64_signed.exe",
+            "installerArguments":"/S",
+            "uninstallerPath":"C:\\Program Files\\Vim\\vim90\\uninstall-gui.exe",
+            "uninstallerArguments":"/S",
+            "desktopIcons":[
+                "gVim 9.0.lnk",
+                "gVim Easy 9.0.lnk",
+                "gVim Read only 9.0.lnk"
+            ]
+        },
+        {
+            "name":"Oracle Java JRE",
+            "appID":"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "shortName":"oraclejavajre",
+            "enabled":"FALSE",
+            "version":"8u333",
+            "deployment":"000",
+            "installerPath":"D:\\Intune Installers\\jre-8u333-windows-x64.exe",
+            "installerArguments":"AUTO_UPDATE=Disable INSTALL_SILENT=Enable REBOOT=Disable REMOVEOUTOFDATEJRES=1 WEB_ANALYTICS=Disable",
+            "uninstallerPath":"C:\\Windows\\System32\\msiexec.exe",
+            "uninstallerArguments":"/x {26A24AE4-039D-4CA4-87B4-2F64180333F0} /quiet",
+            "desktopIcons":[]
+        }
+    ]
+}
