@@ -127,7 +127,11 @@ FOR %%G IN (SUCCESSCODES) DO (
         set ID=1
         set MESSAGE="APPNAME installation succeeded."
         CALL :LOG
+        EXIT /B
     ) ELSE (
+        set ID=4
+        set MESSAGE="APPNAME installation finished with errorlevel %ERRORLEVEL%."
+        CALL :LOG
         set INSTALL_SUCCESS="FALSE"
         set DEPLOYMENT_SUCCESS="FALSE"
         set LEVEL="ERROR"
