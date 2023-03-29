@@ -94,6 +94,7 @@ EXIT /B
 
 :PREINSTALL_PS1
 IF EXIST "preinstall.ps1" (
+    powershell.exe Unblock-File -Path .\preinstall.ps1
     powershell.exe -ExecutionPolicy RemoteSigned -File .\preinstall.ps1
     IF %ERRORLEVEL%==0 (
         set PREINSTALL_PS1_SUCCESS="TRUE"
@@ -196,6 +197,7 @@ EXIT /B
 
 :POSTINSTALL_PS1
 IF EXIST "postinstall.ps1" (
+    powershell.exe Unblock-File -Path .\postinstall.ps1
     powershell.exe -ExecutionPolicy RemoteSigned -File .\postinstall.ps1
     IF %ERRORLEVEL%==0 (
         set POSTINSTALL_PS1_SUCCESS="TRUE"
